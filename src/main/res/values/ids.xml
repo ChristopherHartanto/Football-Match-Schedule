@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="event_date" type="id" />
+    <item name="event_name" type="id" />
+    <item name="team_badge" type="id" />
+    <item name="team_name" type="id" />
+    <item name="event_homeImage" type="id" />
+    <item name="event_awayImage" type="id" />
+    <item name="HomeGoal" type="id" />
+    <item name="HomeTeam" type="id" />
+    <item name="AwayTeam" type="id" />
+    <item name="spinner" type="id" />
+    <item name="list_event" type="id" />
+    <item name="frontLayout" type="id" />
+</resources>

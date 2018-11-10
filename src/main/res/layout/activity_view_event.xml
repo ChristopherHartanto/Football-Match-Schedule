@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDate"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/tvHomeScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="48dp"
+        android:text="-"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/tvVS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvHomeScore"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="@string/vs"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/tvAwayScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/tvHomeScore"
+        android:layout_marginEnd="130dp"
+        android:text="-"
+        android:textSize="30sp" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvDate"
+        android:orientation="vertical"
+        android:id="@+id/awayLayout">
+
+        <ImageView
+            android:id="@+id/ivHome"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="@string/home_name"
+            android:id="@+id/tvHome"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/tvDate"
+        android:orientation="vertical"
+        android:id="@+id/homelayout">
+
+        <ImageView
+            android:id="@+id/ivAway"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@string/away_name"
+            android:id="@+id/tvAway"
+            android:gravity="center"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_below="@id/awayLayout"
+        android:id="@+id/line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="@string/goals"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/goal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/homegoal"
+                android:gravity="left"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/awaygoal"
+                android:gravity="right"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="@string/formation"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/homeformation"
+                android:layout_weight=".50"
+                android:gravity="left"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:gravity="right"
+                android:id="@+id/awayformation"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="@string/shots"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/homeshots"
+                android:layout_weight=".50"
+                android:gravity="left" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/awayshots"
+                android:layout_weight=".50"
+                android:gravity="right"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="@string/red_cards"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_weight=".50"
+                android:id="@+id/homeredcards" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:gravity="right"
+                android:id="@+id/awayredcards"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="@string/yellow_cards"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:gravity="left"
+                android:id="@+id/homeyellowcards"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:gravity="right"
+                android:id="@+id/awayyellowcards"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight=".33"
+            android:layout_height="50dp"
+            android:text="@string/lineupgoalkeeper"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15dp"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:gravity="left"
+                android:id="@+id/homelinegoalkeeper"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".50"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:id="@+id/awaylinegoalkeeper"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="@string/lineupdefense"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:gravity="left"
+                android:id="@+id/homelineupdefense"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:gravity="right"
+                android:id="@+id/awaylineupdefense"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="@string/lineupmidfield"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:gravity="left"
+                android:id="@+id/homelineupmidfield"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:gravity="right"
+                android:id="@+id/awaylineupmidfield"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="@string/lineupforward"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:gravity="left"
+                android:id="@+id/homelineupforward"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:gravity="right"
+                android:id="@+id/awaylineupforward"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="@string/lineupsubstitutes"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:id="@+id/homelineupsubstitutes"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:id="@+id/awaylineupsubstitutes"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+</ScrollView>
